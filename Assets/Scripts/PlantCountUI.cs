@@ -8,7 +8,7 @@ public class PlantCountUI : MonoBehaviour
 
     public void UpdateSeeds (int seedsLeft, int seedsPlanted)
     {
-        _plantedText=" "+seedsPlanted;
-        _remainingText=" "+seedsLeft;
+        _plantedText.text = seedsPlanted.ToString();
+        _remainingText.text = seedsLeft.ToString();
     }
 }
