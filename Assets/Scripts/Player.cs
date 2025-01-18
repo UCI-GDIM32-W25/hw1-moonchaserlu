@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     {
         _numSeedsLeft=_numSeeds;
         _numSeedsPlanted=0;
-        _plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted);
+        _plantCountUI.UpdateSeeds(_numSeedsLeft,_numSeedsPlanted);
     }
 
     private void Update()
@@ -46,10 +46,11 @@ public class Player : MonoBehaviour
         if(_numSeedsLeft>0){
             if (Input.GetKeyDown(KeyCode.Space)){
                  PlantSeed ();
+                _plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted);
             }
         }
 
-       _plantCountUI.UpdateSeeds (_numSeedsLeft,_numSeedsPlanted);
+       
          
        
         
